@@ -1,0 +1,134 @@
+.form-inline {
+    margin-left: 50px;
+}
+
+h1
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.cont {
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.rightimg
+{
+    float: right;
+    margin:  7px 0 7px 7px;
+}
+.leftimg
+{
+    margin-left: 100px;
+    float: left;
+    margin:  7px 7px 7px 0;
+}
+.downbutton
+{
+    float: inline-end;
+}
+a
+{
+color: rgb(233, 174, 10);
+}
+.but_ton{
+margin-top: 10px;
+text-decoration: inherit;
+}
+.navbar
+{
+    background-color: #34cca8;
+}
+.but{
+    color: darkslategrey;
+    text-decoration: none;
+}
+but:hover
+{
+color:black;
+}
+.text-muted
+{
+color:white !important;
+}
+.cont_body
+{
+    width: 50%;
+    display: flex;
+}
+.my_container
+{
+     width: 89%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: flex;
+}
+.tags_margin
+{
+    margin-left: 25rem;
+    width:50%;
+}
+.tag_1
+{
+    color: red;
+
+}
+.tag_2
+{
+    color: blue;
+    
+}
+.tag_3
+{
+    color:green;
+    
+}
+.cont_body_2
+{
+    width: 50%;
+}
+.members
+{
+    color: blue;
+    text-decoration: blue;
+}
+.members:hover{
+    color:darkblue;
+}
+.body_color
+{
+    background-color: lightcyan;
+    background: cover;
+}
+.but_switch
+{
+    border:0.3px solid rgb(112, 21, 230);
+    font-size:inherit; /* Размер текста */
+
+    background-color: inherit;
+}
+li{
+    list-style-type: none;
+    background-color: #34cca8;
+}
+ul{
+    background: cover;
+}
+h1
+{
+    margin-left: 20px;
+}
+.registry
+{
+    margin-left: -15px;
+}
+.topimg
+{
+    float: right;
+    margin:  7px 7px 7px 0;
+}
