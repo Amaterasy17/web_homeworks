@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block nav %}
+  {% include 'inc/navbar_autorised.html' %}
+{% endblock nav %}
+
+{% block title %}
+  {% include 'inc/header.html' %}
+{% endblock title %}
+
+
+{% block content %}
+  {% for question in questions %}
+    {% include 'inc/question.html' %}
+  {% endfor %}
+{% endblock content %}
+
+
+{% block content2 %}
+{% include 'inc/paginator.html' %}
+{% endblock content2 %}

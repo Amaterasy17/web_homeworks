@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  {% include 'inc/navbar_NOT_autorised.html' %}
+{% endblock nav %}
+
+{% block title %}
+  {% include 'inc/header.html' %}
+{% endblock title %}
+
+{% block content %}
+<form>
+  <div class="form-group row">
+    <label for="exampleInputEmail2">Login</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter login">
+  </div>
+  <div class="form-group row">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary mt-4 registry">Log in!</button>
+</form>
+<a href="sign_up.html"><button type="button"  class="btn btn-link btn-sm but_ton registry">create a new account</button></a> 
+{% endblock content %}

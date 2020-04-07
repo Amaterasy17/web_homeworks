@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  {% include 'inc/navbar_autorised.html' %}
+{% endblock nav %}
+
+{% block title %}
+  {% include 'inc/header.html' %}
+{% endblock title %}
+
+
+{% block content %}
+    {% include 'inc/question.html' %}
+{% endblock content %}
+
+
+{% block answers %}
+  {% for answer in answers %}
+    {% include 'inc/answer.html' %}
+  {% endfor %}
+{% endblock answers %}
+
+{% block myanswer %}
+    {% include 'inc/myanswer.html' %}
+{% endblock myanswer %}
+
+
+{% block content2 %}
+{% include 'inc/paginator.html' %}
+{% endblock content2 %}

@@ -1,0 +1,28 @@
+{% load static %}
+
+
+<nav class="navbar navbar-primary bg-dark">
+  <a class="navbar-brand" href="#">
+    <i>ASK_Shevchuk</i>
+  </a>
+  <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search the question">
+      <button class="btn btn-outline-primary my-2 my-sm-0 btn-light" type="submit">ASK!</button>
+  </form>
+  <div class="cont">
+    <img src="{% static 'img/unnamed.jpg' %}"  width="64" height="64" class="leftimg">
+     </img>
+    <div class="row row-cols-1" >
+      <div class="col">
+        <button type="button" class="btn btn-link btn-sm">Nickname</button>
+        <br>
+      </div>
+    </div>
+    <div class="row row-cols-2">
+      <div class="col">
+        <a href="{% url 'settings' %}"><button type="button"  class="btn btn-link btn-sm but_ton">settings</button></a> 
+        <button type="button" class="btn btn-link btn-sm but_ton">logout</button>
+      </div>
+    </div>
+  </div>
+</nav>

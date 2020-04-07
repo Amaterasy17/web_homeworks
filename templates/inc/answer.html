@@ -1,0 +1,26 @@
+{% load static %}
+
+
+
+<div class="card text-black bg-light mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{% static 'img/unnamed.jpg' %}"  class="card-img" alt="avatar">
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch{{ answer.id }}{{ answer.id }}{{ answer.id }}">
+        <label class="custom-control-label" for="customSwitch{{ answer.id }}{{ answer.id }}{{ answer.id }}">Like!</label>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch{{ answer.id }}{{ answer.id }}{{ answer.id }}{{ answer.id }}">
+        <label class="custom-control-label" for="customSwitch{{ answer.id }}{{ answer.id }}{{ answer.id }}{{ answer.id }}">DisLike!</label>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+      <p class="card-text">I have not seen him, I think, that you are right! <br> {{ answer.title }}</p>
+      </div>
+      <p class="card_tags">Tags: <a href="...">tag1, </a>
+      <a href="...">tag2</a></p>
+    </div>
+  </div>
+</div>
