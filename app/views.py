@@ -1,28 +1,33 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 questions = [
-    {'id': i, 'title': f'question # {i}'}
-    for i in range(5)
+    {'id': i, 'title': f'question # {i}', 'Author': f'NickName # {i}', 'Likes': i + i * i, 'DisLikes': i, 'rating': i * i} 
+    for i in range(50)
 ]
 
 answers = [
-    {'id': i, 'title': f'answer # {i}'}
-    for i in range(3)
+    {'id': i, 'title': f'answer # {i}','Author': f'NickName # {i}', 'Likes': i + i * i, 'DisLikes': i, 'rating': i * i}
+    for i in range(20)
 ]
 
 quest = {
-    i: {'id': i, 'title': f'question # {i}'}
-    for i in range(5)
+    i: {'id': i, 'title': f'question # {i}', 'Author': f'NickName # {i}','Likes': i + i * i, 'DisLikes': i, 'rating': i * i}
+    for i in range(50)
 }
 
 
 
 def index(request):
-    return render(request,'index.html',{
-        'questions': questions,
+        question = pagination(questions, request)
+        return render(request,'index.html',{
+        'questions': question,
+        'nick': question,
         'title': 'New questions',
-    })
+        })
+
+        
 
 def login(request):
     return render(request,'login.html',{
@@ -32,9 +37,12 @@ def login(request):
 
 def question(request, gid):
     question = quest.get(gid)
+    answer = pagination(answers,request)
     return render(request,'one_question.html',{
+        'questions': answer,
         'question': question,
-        'answers': answers,
+        'nick': question,
+        'answers': answer,
         'title': f'Question # {gid}',
     })
 
@@ -50,7 +58,22 @@ def ask(request):
     })
 
 
-def settings(request):
+def settings(request, gid):
     return render(request,'settings.html',{
     'title': 'Settings',
     })
+
+
+def pagination(object_list, request, count_pages = 5):
+    page = request.GET.get('page')
+    all_pages = Paginator(object_list, count_pages)
+
+    try:
+        content = all_pages.page(page) 
+    except PageNotAnInteger:
+        content = all_pages.page(1)
+    except EmptyPage:
+        content = pages.page(all_pages.num_pages)
+    return content
+    
+

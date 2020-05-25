@@ -4,15 +4,11 @@
 <div class="card text-black bg-warning mb-3">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src="{% static 'img/unnamed.jpg' %}"  class="card-img" alt="avatar">
-      <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="customSwitch{{ question.id }}">
-        <label class="custom-control-label" for="customSwitch{{ question.id }}">Like!</label>
-      </div>
-      <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="customSwitch{{ question.id }}{{ question.id }}">
-        <label class="custom-control-label" for="customSwitch{{ question.id }}{{ question.id }}">DisLike!</label>
-      </div>
+      <div class="date">20/05/2020</div>
+      <div class="nick" >Author: {{ question.Author }}</div>
+      <img src="{% static 'img/unnamed.jpg' %}"  class="card-img cardImg" alt="avatar">
+      <a class="like" href="#">likes!    {{ question.Likes }} <br></a>
+      <a class="dislike" href="#">dislikes! {{ question.DisLikes }}</a>
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -20,7 +16,8 @@
       <p class="card-text">May be somebody have seen Stalin? Where is he? May be he is dead. Oh, no STALINA NA VAS NET!!!!</p>
       </div>
       <p class="card_tags">Tags: <a href="...">tag1, </a>
-      <a href="...">tag2</a></p>
+      <a href="...">tag2<br></a></p>
+      <div class="rating" href="#">Rating: {{ question.rating }}</div>
     </div>
   </div>
 </div>

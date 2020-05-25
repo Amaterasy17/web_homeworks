@@ -136,3 +136,36 @@ h1
 {
     margin-left: 15rem;
 }
+.date
+{
+    margin-top: 5px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+}
+.nick
+{
+    margin-left: 10px;
+}
+.like
+{
+    text-align: right;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.dislike
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.rating
+{
+    margin-left: 75%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.cardImg
+{
+    margin-left: 5px;
+}
