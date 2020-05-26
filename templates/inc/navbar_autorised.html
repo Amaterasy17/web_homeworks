@@ -6,9 +6,13 @@
     <i>ASK_Shevchuk</i>
   </a>
   <form class="form-inline my-2 my-lg-0">
+
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search the question">
-      <button class="btn btn-outline-primary my-2 my-sm-0 btn-light" type="submit">ASK!</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0 btn-light" type="submit">Search</button>
   </form>
+  <a href="{% url 'ask' %}">
+    <button class="btn btn-outline-primary my-2 my-sm-0 btn-light ask_button" type="submit">ASK!</button>
+    </a>
   <div class="cont">
     <img src="{% static 'img/unnamed.jpg' %}"  width="64" height="64" class="leftimg">
      </img>

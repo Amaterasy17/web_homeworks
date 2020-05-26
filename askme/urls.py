@@ -26,4 +26,6 @@ urlpatterns = [
     path('sign_up/', views.sign_up, name='registration'),
     path('ask/', views.ask, name='ask'),
     path('settings/', views.settings, name="settings"),
+    path('hot/', views.hot, name="hot"),
+    path('tag/<slug:cur_tag>/', views.tag, name = 'tag')
 ]

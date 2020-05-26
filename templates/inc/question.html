@@ -12,11 +12,14 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-      <h5 class="card-title"><a href="{% url 'question' gid=question.id %}">{{ question.title }}<br> Where is Stalin?</a></h5>
+      <h5 class="card-title"><a href="{% url 'question' gid=question.id %}">{{ question.title }}<br> Where is Stalin? (20)</a></h5>
       <p class="card-text">May be somebody have seen Stalin? Where is he? May be he is dead. Oh, no STALINA NA VAS NET!!!!</p>
       </div>
-      <p class="card_tags">Tags: <a href="...">tag1, </a>
-      <a href="...">tag2<br></a></p>
+      <p class="card_tags">Tags:
+        {% for tag in question.tags %}
+          <a href="...">{{ tag.tag }}</a>
+        {% endfor %}
+      </p>
       <div class="rating" href="#">Rating: {{ question.rating }}</div>
     </div>
   </div>

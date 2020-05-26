@@ -2,10 +2,11 @@
 
 
 <p class="tags_margin"><strong>Popular Tags</strong><br></p>
-      <p class="tags_margin"><span class="tag_1">Technopark</span><br></p>
-      <p class="tags_margin"><span class="tag_2">Stalin</span><br></p>
-      <p class="tags_margin"><span class="tag_3">Moonpark</span><br></p>
-      <p class="tags_margin"><strong>Best members</strong><br></p>
+      {% for tag in tags %}
+             <a class="tags_margin tags" href="{% url 'tag' cur_tag=tag.tag %}"><span class="tag_{{ tag.id }}">{{ tag.tag }}<br></span></a>
+      {% endfor %}
+      <p class="tags_margin"><strong><br>Best members</strong><br></p>
       <a class="members tags_margin" href= "...">drDre<br></a>
       <a class="members tags_margin" href= "...">DOOM<br></a>
       <a class="members tags_margin" href= "...">Lifestealer<br></a>
+

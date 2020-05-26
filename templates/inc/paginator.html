@@ -3,21 +3,21 @@
 
 <div class="my_container">
       <nav aria-label="Page navigation example">
-        {% if questions.has_other_pages %}
+        {% if content.has_other_pages %}
         <ul class="pagination">
-          {% if questions.has_previous %}
+          {% if content.has_previous %}
           <li class="page-item">
-            <a class="page-link" href="?page={{ questions.previous_page_number }}" aria-label="Previous">
+            <a class="page-link" href="?page={{ content.previous_page_number }}" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
           {% endif %}
-          {% for i in questions.paginator.page_range %}
+          {% for i in content.paginator.page_range %}
           <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
           {% endfor%}
-          {% if questions.has_next %}
+          {% if content.has_next %}
           <li class="page-item">
-            <a class="page-link" href="?page={{ questions.next_page_number }}" aria-label="Next">
+            <a class="page-link" href="?page={{ content.next_page_number }}" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>
