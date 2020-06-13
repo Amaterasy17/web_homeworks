@@ -98,7 +98,7 @@ def hot(request):
 
 
 
-def tag(requLifestealerest, cur_tag):
+def tag(request, cur_tag):
     question = pagination(list(filter(lambda x: cur_tag in x['tags'][0]['tag'], questions)),request)
     return render(request,'index.html',{
         'tags': tags,
